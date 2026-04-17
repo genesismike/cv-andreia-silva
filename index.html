@@ -7,46 +7,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream:      #f5f0e8;
-  --cream-dark: #ede8df;
-  --cream-mid:  #e0d9ce;
-  --white:      #fdfaf6;
-  --gray-100:   #f0ece5;
-  --gray-200:   #ddd8d0;
-  --gray-400:   #a09890;
-  --gray-600:   #6b645c;
-  --gray-800:   #3a342c;
-  --ink:        #1c1714;
-  --accent:     #5a4e42;
-  --accent-lt:  #c8bfb4;
-  --gold:       #8c7355;
-  --gold-lt:    #d4c4ae;
+  --cream:      #f7f2e8;
+  --cream-dark: #ede5d5;
+  --cream-mid:  #d9ceba;
+  --white:      #fdfaf5;
+  --gray-100:   #f0ebe0;
+  --gray-200:   #d5ccbc;
+  --gray-400:   #6a6258;
+  --gray-600:   #32302a;
+  --gray-800:   #1e1c18;
+  --ink:        #181510;
+  --accent:     #c8c4bc;
+  --accent-lt:  #555048;
+  --gold:       #b5752a;
+  --gold-lt:    #c89040;
+  --hero-text:  #2a2825;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:13.5px;line-height:1.65;}
 
 /* TOPBAR */
-.topbar{position:sticky;top:0;z-index:200;background:var(--accent);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 1px 16px rgba(90,78,66,.18);}
-.topbar-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--cream);letter-spacing:.08em;font-weight:400;}
-.topbar-name span{color:var(--gold-lt);font-style:italic;}
-.btn-dl{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--gold-lt);color:var(--gold-lt);padding:8px 20px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .22s;}
-.btn-dl:hover{background:var(--gold-lt);color:var(--accent);}
+.topbar{position:sticky;top:0;z-index:200;background:var(--accent);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 1px 12px rgba(0,0,0,.1);}
+.topbar-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--hero-text);letter-spacing:.08em;font-weight:400;}
+.topbar-name span{color:var(--hero-text);font-style:normal;}
+.btn-dl{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:8px 20px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .22s;}
+.btn-dl:hover{background:var(--gold);color:#fff;}
 .btn-dl svg{width:12px;height:12px;}
 
 /* HERO */
-.hero{background:var(--accent);padding:56px 48px 52px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(200,191,180,.12);pointer-events:none;}
-.hero::after{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(200,191,180,.08);pointer-events:none;}
-.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:16px;opacity:.8;}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:300;color:var(--cream);line-height:1.02;letter-spacing:.02em;}
-.hero h1 em{font-style:italic;color:var(--gold-lt);}
+.hero{background:var(--accent);padding:48px 48px 44px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(0,0,0,.06);pointer-events:none;}
+.hero::after{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(0,0,0,.04);pointer-events:none;}
+.hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:.9;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,62px);font-weight:300;color:var(--hero-text);line-height:1.02;letter-spacing:.02em;}
+.hero h1 em{font-style:italic;color:var(--gold);}
 .hero-sub{font-size:12px;font-weight:400;color:var(--accent-lt);letter-spacing:.16em;text-transform:uppercase;margin-top:18px;}
 .hero-contacts{display:flex;flex-direction:column;gap:12px;min-width:230px;}
-.c-row{display:flex;align-items:center;gap:12px;color:var(--cream-mid);font-size:12px;text-decoration:none;transition:color .2s;}
-.c-row:hover{color:var(--gold-lt);}
-.c-icon{width:28px;height:28px;border-radius:2px;background:rgba(200,191,180,.1);border:1px solid rgba(200,191,180,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.c-icon svg{width:11px;height:11px;stroke:var(--gold-lt);}
+.c-row{display:flex;align-items:center;gap:12px;color:var(--accent-lt);font-size:12px;text-decoration:none;transition:color .2s;}
+.c-row:hover{color:var(--gold);}
+.c-icon{width:28px;height:28px;border-radius:2px;background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.c-icon svg{width:11px;height:11px;stroke:var(--gold);}
 
 /* LAYOUT */
 .layout{display:grid;grid-template-columns:260px 1fr;}
@@ -105,7 +106,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .tl-dot{position:absolute;left:3px;top:10px;width:10px;height:10px;border-radius:50%;background:var(--white);border:2px solid var(--gray-200);}
 .tl-dot.current{background:var(--gold);border-color:var(--gold);}
 .tl-card{background:var(--white);border:1px solid var(--gray-200);padding:18px 22px;transition:box-shadow .2s;}
-.tl-card:hover{box-shadow:0 4px 20px rgba(90,78,66,.08);}
+.tl-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.07);}
 .tl-period{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
 .tl-role{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.2;}
 .tl-company{font-size:11.5px;color:var(--gray-400);font-weight:500;letter-spacing:.06em;margin-bottom:12px;}
@@ -115,23 +116,23 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
 .tl-desc ul li::before{content:'–';color:var(--gold);flex-shrink:0;margin-top:.5px;}
 .tl-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
 .tag{background:var(--cream);color:var(--gray-600);font-size:10.5px;padding:3px 11px;border:1px solid var(--cream-mid);}
-.tag.current{background:var(--cream-dark);color:var(--accent);font-weight:600;border-color:var(--gold-lt);}
+.tag.current{background:var(--cream-dark);color:#5a3a10;font-weight:600;border-color:var(--gold);}
 
 /* PROJECT BADGE */
-.proj-badge{background:var(--cream-dark);border:1px solid var(--gold-lt);padding:10px 14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--accent);font-weight:500;}
+.proj-badge{background:var(--cream-dark);border:1px solid var(--gold);padding:10px 14px;margin-top:10px;display:inline-flex;align-items:center;gap:8px;font-size:11px;color:#5a3a10;font-weight:500;}
 .proj-badge::before{content:'◆';font-size:7px;color:var(--gold);}
 
 /* OBJECTIVE */
 .obj-box{background:var(--white);border:1px solid var(--gray-200);padding:22px 26px;}
 .obj-box p{font-size:12.5px;color:var(--gray-600);line-height:1.75;margin-bottom:8px;}
 .obj-box p:last-child{margin-bottom:0;}
-.obj-item{display:flex;align-items:flex-start;gap:10px;padding:5px 0;}
+.obj-item{display:flex;align-items:flex-start;gap:10px;padding:5px 0;font-size:12.5px;color:var(--gray-600);line-height:1.7;}
 .obj-item::before{content:'→';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:3px;}
 
 /* FOOTER */
-.cv-footer{background:var(--accent);padding:22px 48px;display:flex;justify-content:space-between;align-items:center;}
+.cv-footer{background:var(--accent);border-top:1px solid var(--gray-200);padding:22px 48px;display:flex;justify-content:space-between;align-items:center;}
 .cv-footer span{font-size:10.5px;color:var(--accent-lt);letter-spacing:.1em;}
-.cv-footer a{font-size:10.5px;color:var(--gold-lt);text-decoration:none;}
+.cv-footer a{font-size:10.5px;color:var(--gold);text-decoration:none;}
 
 @media(max-width:820px){
   .hero{grid-template-columns:1fr;padding:40px 24px;}
@@ -192,7 +193,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
 <body>
 
 <div class="topbar">
-  <div class="topbar-name">Andreia Filipa <span>Santos Silva</span></div>
+  <div class="topbar-name">Andreia Silva</div>
   <button class="btn-dl" onclick="window.print()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Descarregar CV
@@ -202,7 +203,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
 <header class="hero">
   <div>
     <div class="hero-eyebrow">Currículum Vitae · Lisboa, Portugal</div>
-    <h1>Andreia Filipa<br><em>Santos Silva</em></h1>
+    <h1>Andreia <em>Silva</em></h1>
     <div class="hero-sub">Analista · Crédito & TI · Marketing · Administração</div>
   </div>
   <div class="hero-contacts">
@@ -230,20 +231,15 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
   <aside class="sidebar">
 
     <div class="s-section">
-      <div class="s-title">Perfil</div>
-      <p class="about-p">Mais de 20 anos de percurso numa única empresa — da administração ao marketing, do serviço ao cliente à análise de crédito e TI. Versátil, metódica e orientada para resultados.</p>
-    </div>
-
-    <div class="s-section">
       <div class="s-title">Ferramentas & Sistemas</div>
       <div>
-        <div class="skill-item"><div class="skill-dot"></div>SAP (ERP — utilizadora avançada)</div>
-        <div class="skill-item"><div class="skill-dot"></div>SAC — SAP Analytics Cloud</div>
-        <div class="skill-item"><div class="skill-dot"></div>SharePoint — gestão documental</div>
+        <div class="skill-item"><div class="skill-dot"></div>SAP (utilizadora avançada)</div>
+        <div class="skill-item"><div class="skill-dot"></div>Sales Cloud</div>
+        <div class="skill-item"><div class="skill-dot"></div>SharePoint</div>
         <div class="skill-item"><div class="skill-dot"></div>Microsoft Teams</div>
         <div class="skill-item"><div class="skill-dot"></div>Microsoft Office (Word, Excel, Outlook, PowerPoint)</div>
-        <div class="skill-item"><div class="skill-dot"></div>CRM — gestão de clientes</div>
         <div class="skill-item"><div class="skill-dot"></div>Marketing Digital — redes sociais & métricas</div>
+        <div class="skill-item"><div class="skill-dot"></div>SAC — SAP Analytics Cloud</div>
       </div>
     </div>
 
@@ -295,20 +291,20 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
         <div class="edu-year">2006</div>
       </div>
       <div class="edu-item">
-        <div class="edu-name">Formação em Higiene e Segurança no Trabalho</div>
-        <div class="edu-sub">Certificado</div>
+        <div class="edu-name">Formação em Marketing Digital</div>
       </div>
       <div class="edu-item">
-        <div class="edu-name">Formação em Segurança Ambiental</div>
-        <div class="edu-sub">Certificado</div>
+        <div class="edu-name">Formação SharePoint / Teams</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-name">Formação SAP</div>
       </div>
     </div>
 
     <div class="s-section">
       <div class="s-title">Disponibilidade</div>
       <div class="edu-item">
-        <div class="edu-name">Imediata</div>
-        <div class="edu-sub">Lisboa e Margem Sul</div>
+        <div class="edu-name">Lisboa e Margem Sul</div>
       </div>
     </div>
 
@@ -324,6 +320,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
       </div>
       <div class="summary-box">
         <p>Profissional com experiência abrangente em finanças, crédito, TI, marketing e atendimento ao cliente, desenvolvida ao longo de mais de 20 anos na mesma organização. Forte capacidade de adaptação, visão global dos processos internos e facilidade em colaborar com diferentes equipas. Comprometida com a eficiência, a melhoria contínua e a evolução profissional.</p>
+        <p style="margin-top:12px;">Experiência em análise de crédito, marketing e apoio ao cliente. Capacidade de organização e adaptabilidade, aprendizagem rápida e foco em resultados.</p>
       </div>
     </div>
 
@@ -346,11 +343,12 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
             <div class="tl-company">Spinerg (Shell) · Lisboa, Portugal</div>
             <div class="tl-desc">
               <ul>
-                <li>Análise de crédito, avaliação de risco e gestão de limites e comportamentos de pagamento</li>
-                <li>Relatórios financeiros e análises via SAC (SAP Analytics Cloud)</li>
-                <li>Suporte IT de 1.ª linha e gestão de fornecedores tecnológicos</li>
-                <li>Cobranças, abertura de clientes e apoio a novos negócios</li>
-                <li>Apoio operacional à equipa comercial</li>
+                <li>Análise e avaliação da capacidade financeira de clientes, com apoio à decisão de concessão de crédito</li>
+                <li>Avaliação de risco de crédito, através da análise de dados financeiros</li>
+                <li>Elaboração de pareceres de crédito de acordo com políticas internas</li>
+                <li>Cobranças</li>
+                <li>Articulação com áreas de apoio ao cliente, IT e sistemas, assegurando fluidez dos processos</li>
+                <li>Apoio à implementação e melhoria de sistemas relacionados com processos de crédito</li>
               </ul>
             </div>
             <div class="proj-badge">Projecto 2025 — Migração SAP 4/HANA & Sales Cloud · Reorganização SharePoint</div>
@@ -374,7 +372,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
             <div class="tl-company">Spinerg (Shell) · Lisboa, Portugal</div>
             <div class="tl-desc">
               <ul>
-                <li>Planeamento e execução de campanhas de marketing digital</li>
+                <li>Planeamento e execução de campanhas de marketing</li>
                 <li>Gestão de redes sociais e análise de métricas de desempenho</li>
                 <li>Organização de eventos internos e externos e formações</li>
                 <li>Gestão do CRM e apoio a novos negócios e à equipa comercial</li>
@@ -500,6 +498,5 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
   <span>© 2025 · Andreia Filipa Santos Silva</span>
   <a href="mailto:silvaandreia@live.com.pt">silvaandreia@live.com.pt</a>
 </footer>
-
 </body>
 </html>
